@@ -20,8 +20,8 @@ int main() {
                 cout << img->image[i * img->width + j].getB() * 255 << " ";
             }
         }
-        ImageProcessing<RGBPixel> processing(img->width, img->height);
-        processing.blur(img->width, img->height, img->image);
+        ImageProcessing<RGBPixel> processing(img);
+        img=processing.blur();
         savePPM(*img, "/home/mohamed/Scaricati/ppmimages/sign.ppm");
 
     }
